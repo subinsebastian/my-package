@@ -1,12 +1,14 @@
 {
   "name": "my-package-publish-learning",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
+    "document:change": "pnpm changeset",
+    "bump:version": "pnpm changeset version && open CHANGELOG.md",
     "lint": "tsc"
   },
   "keywords": [],
