@@ -1,5 +1,5 @@
 {
-  "name": "my-package",
+  "name": "@subinsebastian/my-package",
   "version": "0.3.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,7 +9,12 @@
     "build": "tsup index.ts --format cjs,esm --dts",
     "document:change": "pnpm changeset",
     "bump:version": "pnpm changeset version && open CHANGELOG.md",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "echo 'no test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subinsebastian/my-package.git"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +23,8 @@
     "@changesets/cli": "^2.26.1",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
+  },
+  "publishConfig": {
+    "@subinsebastian:registry": "https://npm.pkg.github.com"
   }
 }
